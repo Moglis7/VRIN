@@ -1,0 +1,264 @@
+<krpano>    
+    <!--WebVR-->
+	<include url="%VIEWER%/plugins/webvr.xml" />
+	<plugin name="webvr" postracking="true"  />
+
+    <view hlookat="0" vlookat="0" fovtype="MFOV" fov="110" fovmin="80" fovmax="110" limitview="auto"/>
+
+    <scene name="scene_landing" title="landing" lat="" lng="" heading="">
+        
+		<hotspot name="start" style="start_button"
+            distorted="true"
+            tz="100"
+            align="center"
+            width="500"
+            html="Start"
+            onover="tween(scale,1.4,easeOutExpo,0.2);"
+            onout="tween(scale,1,easeOutExpo,0.2);"
+            onclick="loadscene(scene_idle,null,MERGE,OPENBLEND(0.5, 0.0, 0.2, 0.0, linear));"
+		/>
+	</scene>
+
+    <scene name="scene_idle" title="1"   onstart="" thumburl="" lat="" lng="" heading="" >
+        
+        <plugin name="video"
+            url.html5="../plugins/videoplayer.js"
+            url.flash="../plugins/videoplayer.swf"
+            videourl="../idle.webm"
+            panovideo="true"
+            pausedonstart="false"
+            loop="true"
+            volume="1.0"
+        />
+        
+        <image hfov="360"  vfov="180">            
+            <sphere url="plugin:video" />
+        </image>
+        
+        <!--   .............. Nurse Questions ............   -->
+        <!-- oy:(move up and down) ox:(move left right) ry:(rotate left right) html:(content of the button) -->
+        <hotspot name="nurse_1" style="button" oy="-450" ox="1250" ry="40" tz="2000" scale="2.2"
+            distorted="true"				 			
+            width="300"		
+            zoom="true"	
+            html="What can we do to support staff with burnout?"
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_n1, null,MERGE|KEEPMOVING,OPENBLEND(0.5, 0.0, 0.2, 0.0, linear));"
+        />
+
+        <hotspot name="nurse_2" style="button" oy="-250" ox="1250" ry="40" tz="2000" scale="2.2"
+            distorted="true"
+            width="300"		        
+            html="What is the best way to improve retention of clinical staff at this difficult time?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_n2, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="nurse_3" style="button" oy="-50" ox="1250" ry="40" tz="2000" scale="2.2"
+            distorted="true"
+            width="300"		         
+            html="Are there issues with working hours right now?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_n3, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="nurse_4" style="button" oy="150" ox="1250" ry="40" tz="2000" scale="2.2"
+            distorted="true"
+            width="300"		         
+            html="What kind of health workforce policies would you like to see implemented?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_n4, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="nurse_5" style="button" oy="350" ox="1250" ry="40" tz="2000" scale="2.2"
+            distorted="true"	
+            width="300"		         
+            html="Will staff require counselling and support from the hospital?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_n5, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="nurse_6" style="button" oy="550" ox="1250" ry="40" tz="2000" scale="2.2"
+            distorted="true"            
+            width="300"	       
+            html="What are clinical pathways for sick patients?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_n6, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <!-- <hotspot name="nurse_1" style="button" oy="0" ox="450" ry="50" tz="-300"
+            distorted="true"
+            width="300"		         
+            html="What kind of health workforce policies would you like to see implemented?"				
+            onover="tween(scale,1.4,easeOutExpo,0.2);"
+            onout="tween(scale,1,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_1, null,MERGE|KEEPMOVING,COLORBLEND(1.0,0x000000,easeOutSine));"
+        />
+
+        <hotspot name="nurse_2" style="button" oy="90" ox="450" ry="50" tz="-300"
+            distorted="true"	
+            width="300"		         
+            html="Will staff require counselling and support from the hospital?"				
+            onover="tween(scale,1.4,easeOutExpo,0.2);"
+            onout="tween(scale,1,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_1, null,MERGE|KEEPMOVING,COLORBLEND(1.0,0x000000,easeOutSine));"
+        />
+
+        <hotspot name="nurse_3" style="button" oy="170" ox="450" ry="50" tz="-300"
+            distorted="true"            
+            width="300"	       
+            html="What are clinical pathways for sick patients?"				
+            onover="tween(scale,1.4,easeOutExpo,0.2);"
+            onout="tween(scale,1,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_1, null,MERGE|KEEPMOVING,COLORBLEND(1.0,0x000000,easeOutSine));"
+        />
+
+        <hotspot name="nurse_4" style="button" oy="0" ox="700" ry="70" tz="-800"
+            distorted="true"
+            width="300"		         
+            html="What kind of health workforce policies would you like to see implemented?"				
+            onover="tween(scale,1.4,easeOutExpo,0.2);"
+            onout="tween(scale,1,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_1, null,MERGE|KEEPMOVING,COLORBLEND(1.0,0x000000,easeOutSine));"
+        />
+
+        <hotspot name="nurse_5" style="button" oy="100" ox="700" ry="70" tz="-800"
+            distorted="true"	
+            width="300"		         
+            html="Will staff require counselling and support from the hospital?"				
+            onover="tween(scale,1.4,easeOutExpo,0.2);"
+            onout="tween(scale,1,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_1, null,MERGE|KEEPMOVING,COLORBLEND(1.0,0x000000,easeOutSine));"
+        />
+
+        <hotspot name="nurse_6" style="button" oy="190" ox="700" ry="70" tz="-800"
+            distorted="true"            
+            width="300"	       
+            html="What are clinical pathways for sick patients?"				
+            onover="tween(scale,1.4,easeOutExpo,0.2);"
+            onout="tween(scale,1,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_1, null,MERGE|KEEPMOVING,COLORBLEND(1.0,0x000000,easeOutSine));"
+        /> -->
+
+        <!--   .............. Doctor Questions ............   -->
+        <!-- oy:(move up and down) ox:(move left right) ry:(rotate left right) html:(content of the button) -->
+        <hotspot name="doctor_1" style="button" oy="-450" ox="-1400" ry="-40" tz="2000" scale="2.2"
+            distorted="true"				 			
+            width="300"		
+            html="What equipment are we missing that you need to treat patients with covid?"
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick=" loadscene(scene_d1, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="doctor_2" style="button" oy="-250" ox="-1400" ry="-40" tz="2000" scale="2.2"
+            distorted="true"       
+            width="300"	       
+            html="Do you have appropriate protective equipment on the ward?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_d2, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="doctor_3" style="button" oy="-50" ox="-1400" ry="-40" tz="2000" scale="2.2"
+            distorted="true"
+            width="300"		         
+            html="Clinically, how does this virus affect patients?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_d3, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="doctor_4" style="button" oy="150" ox="-1400" ry="-40" tz="2000" scale="2.2"
+            distorted="true"
+            width="300"		         
+            html="How quickly do sick patients recover and be discharged?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_d4, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="doctor_5" style="button" oy="350" ox="-1400" ry="-40" tz="2000" scale="2.2"
+            distorted="true"
+            width="300"		         
+            html="Do you know the current ICU bed capacity?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_d5, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="doctor_6" style="button" oy="550" ox="-1400" ry="-40" tz="2000" scale="2.2"
+            distorted="true"	
+            width="300"		         
+            html="Who should we prioritise care to if bed capacity is limited?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_d6, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <!--   .............. Manager Questions ............   -->
+        <!-- oy:(move up and down) ox:(move left right) ry:(rotate left right) html:(content of the button) -->
+        <hotspot name="manager_1" style="button" oy="-250" ox="-1000" ry="230" tz="-3200" scale="2.2"
+            distorted="true"				 			
+            width="300"		
+            html="What is the level of infection for clinical staff on the ward?"
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_wm1, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="manager_2" style="button" oy="-50" ox="-1000" ry="230" tz="-3200" scale="2.2"
+            distorted="true"       
+            width="300"	       
+            html="Are we allowing family to visit covid patients?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_wm2, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="manager_3" style="button" oy="150" ox="-1000" ry="230" tz="-3200" scale="2.2"
+            distorted="true"
+            width="300"		         
+            html="How are clinical staff dealing with the onset of this pandemic?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_wm3, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="manager_4" style="button" oy="-250" ox="0" ry="180" tz="-4000" scale="2.2"
+            distorted="true"
+            width="300"		         
+            html="What is the cleaning/health and safety routine for the ward?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_wm4, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="manager_5" style="button" oy="-50" ox="0" ry="180" tz="-4000" scale="2.2"
+            distorted="true"
+            width="300"		         
+            html="What is the relationship with other departments such as Elderly Care?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_wm5, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="manager_6" style="button" oy="150" ox="0" ry="180" tz="-4000" scale="2.2"
+            distorted="true"	
+            width="300"		         
+            html="What is the current HDU ward capacity?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_wm6, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />        
+
+    </scene>
+  
+</krpano>
+

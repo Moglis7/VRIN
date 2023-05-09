@@ -1,0 +1,394 @@
+﻿<krpano version="1.20.11" title="Virtual Tour">
+	<!-- Idle sceen-->
+	<include url="./components/questionSceens.xml"/>
+	<!--WebVR-->
+	<include url="%VIEWER%/plugins/webvr.xml" />
+	<plugin name="webvr" postracking="true" />
+ 
+	<action name="startup" autorun="onstart">
+		if(device.panovideosupport == false,
+		error('Sorry, but panoramic videos are not supported by your current browser!');
+		,
+		loadscene(scene_landing,null,MERGE|KEEPMOVING,COLORBLEND(1.0,0x000000,easeOutSine));
+		);
+	</action>
+			
+	<view hlookat="0" vlookat="0" fovtype="MFOV" fov="110" fovmin="80" fovmax="110" limitview="auto"/>
+	<control 
+         mousefovchange="1.5"  
+         bouncinglimits="true"
+    />
+	<!-- <view  fovmin="10.0" fovmax="190.0"/> -->
+		 
+	<!--Buttons style-->
+	<style name="button" type="text"
+		   css="text-align:center; 
+		   text-align:center; 
+		   font-size:17px; 
+		   font-weight:700;"
+		   padding="8 8"
+		   mergedalpha="false"
+		   bgborder="4 0x808080. 1"
+		   bgroundedge="15"
+		   bgshadow="0 1 4 0x000000 1.0"
+		   onover="set(bgcolor, 0xC7E4FC);"
+		   onout="calc(bgcolor, pressed ? 0x90CAF9 : 0xFFFFFF);"
+		   ondown="set(bgcolor, 0x90CAF9);"
+		   onup="calc(bgcolor, hovering ? 0xC7E4FC : 0xFFFFFF);"
+	/>
+
+	<style name="start_button" type="text"
+		   css="text-align:center; 
+		   font-size:30px; 
+		   font-weight:700;"		   
+		   padding="30 30"
+		   mergedalpha="false"
+		   bgborder="4 0x808080. 1" 
+		   bgroundedge="15"
+		   bgshadow="0 1 4 0x000000 1.0"
+		   onover="set(bgcolor, 0xC7E4FC);"
+		   onout="calc(bgcolor, pressed ? 0x90CAF9 : 0xFFFFFF);"
+		   ondown="set(bgcolor, 0x90CAF9);"
+		   onup="calc(bgcolor, hovering ? 0xC7E4FC : 0xFFFFFF);"		   
+	/>
+
+
+	<!-- <hotspot name="go_back" style="button" ox="0" oy="550" ry="0" tz="2000"	scale="2.2"	
+				distorted="true"				 			
+				width="300"	
+				html="Back to Questions"
+				onover="tween(scale,2.8,easeOutExpo,0.2);"
+            	onout="tween(scale,2.2,easeOutExpo,0.2);"
+            	onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle, null,MERGE|KEEPMOVING,COLORBLEND(1.0,0x000000,easeOutSine)); "
+			/>
+
+			<hotspot name="go_back2" style="button" ox="-600" oy="600" ry="200" tz="-4000"	scale="2.2"	
+				distorted="true"				 			
+				width="250"	
+				html="Back to Questions"
+				onover="tween(scale,2.8,easeOutExpo,0.2);"
+            	onout="tween(scale,2.2,easeOutExpo,0.2);"
+            	onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle, null,MERGE|KEEPMOVING,COLORBLEND(1.0,0x000000,easeOutSine)); "
+			/>			  -->
+
+
+	<!--      ........  Ansewer Scenes   ...........   -->
+
+	<!-- nurse -->
+	<scene name="scene_n1" title="n1" onstart="" thumburl="" lat="" lng="" heading="" >
+
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./nurse/n1.webm"
+                    panovideo="true"
+                    pausedonstart="false"
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+
+	<scene name="scene_n2" title="n2" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./nurse/n2.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+
+	<scene name="scene_n3" title="n3" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./nurse/n3.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+
+
+	<scene name="scene_n4" title="n4" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./nurse/n4.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+
+
+	<scene name="scene_n5" title="n5" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./nurse/n5.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+	
+	
+	<scene name="scene_n6" title="n6" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./nurse/n6.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+	
+	<!-- Dotcor -->
+	
+	<scene name="scene_d1" title="d1" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./doctor/d1.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+	
+	
+	<scene name="scene_d2" title="d2" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./doctor/d2.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+	
+	
+	<scene name="scene_d3" title="d3" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./doctor/d3.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+	
+	<scene name="scene_d4" title="d4" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./doctor/d4.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+	
+	<scene name="scene_d5" title="d5" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./doctor/d5.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+	
+	<scene name="scene_d6" title="d6" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./doctor/dx.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+	
+	<!-- Ward manager --> 
+	
+	<scene name="scene_wm1" title="wm1" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./ward_manager/wm1.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+	
+	<scene name="scene_wm2" title="wm2" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./ward_manager/wm2.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+	
+	<scene name="scene_wm3" title="wm3" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./ward_manager/wm3.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+	
+	<scene name="scene_wm4" title="wm4" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./ward_manager/wm4.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+	
+	<scene name="scene_wm5" title="wm5" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./ward_manager/wm5.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+	
+	<scene name="scene_wm6" title="wm6" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./ward_manager/wm6.webm"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+    
+</krpano>
