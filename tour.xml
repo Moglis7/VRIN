@@ -1,6 +1,9 @@
 ﻿<krpano version="1.20.11" title="Virtual Tour">
 	<!-- Idle sceen-->
-	<include url="./components/questionSceens.xml"/>
+	<include url="./components/landingPage.xml"/>
+	<include url="./components/questionsGirl.xml"/>
+	<include url="./components/questionsUsef.xml"/>
+	<include url="./components/questionsUsef2.xml"/>
 	<!--WebVR-->
 	<include url="%VIEWER%/plugins/webvr.xml" />
 	<plugin name="webvr" postracking="true" />
@@ -39,8 +42,9 @@
 
 	<style name="start_button" type="text"
 		   css="text-align:center; 
-		   font-size:30px; 
-		   font-weight:700;"		   
+		   font-size:20px; 
+		   font-weight:800;"
+    
 		   padding="30 30"
 		   mergedalpha="false"
 		   bgborder="4 0x808080. 1" 
@@ -51,6 +55,7 @@
 		   ondown="set(bgcolor, 0x90CAF9);"
 		   onup="calc(bgcolor, hovering ? 0xC7E4FC : 0xFFFFFF);"		   
 	/>
+    
 
 
 	<!-- <hotspot name="go_back" style="button" ox="0" oy="550" ry="0" tz="2000"	scale="2.2"	

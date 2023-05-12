@@ -1,0 +1,65 @@
+<krpano>
+  
+  <scene  name="scene_U1" title="1"   onstart="" thumburl="" lat="" lng="" heading="" >
+          <plugin name="video"
+            url.html5="../plugins/videoplayer.js"
+            url.flash="../plugins/videoplayer.swf"
+            videourl="../idle5.webm"
+            panovideo="true"
+            pausedonstart="false"
+            loop="true"
+            volume="1.0"
+        />
+        
+        <image hfov="360"  vfov="180">            
+            <sphere url="plugin:video" />
+        </image>
+
+        <hotspot name="doctor_1" style="button" oy="-450" ox="-500" ry="-5" tz="2000" scale="2.2"
+            distorted="true"				 			
+            width="300"		
+            html="What equipment are we missing that you need to treat patients with covid?"
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick=" loadscene(scene_d1, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="doctor_2" style="button" oy="-250" ox="-500" ry="-5" tz="2000" scale="2.2"
+            distorted="true"       
+            width="300"	       
+            html="Do you have appropriate protective equipment on the ward?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_d2, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="doctor_3" style="button" oy="-50" ox="-500" ry="-5" tz="2000" scale="2.2"
+            distorted="true"
+            width="300"		         
+            html="Clinically, how does this virus affect patients?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_d3, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="doctor_4" style="button" oy="150" ox="-500" ry="-5" tz="2000" scale="2.2"
+            distorted="true"
+            width="300"		         
+            html="How quickly do sick patients recover and be discharged?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_d4, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <hotspot name="doctor_5" style="button" oy="350" ox="-500" ry="-5" tz="2000" scale="2.2"
+            distorted="true"
+            width="300"		         
+            html="Do you know the current ICU bed capacity?"				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_d5, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        />
+   </scene>
+
+  
+</krpano>
