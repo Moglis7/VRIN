@@ -24,7 +24,7 @@
         <plugin name="video"
             url.html5="../plugins/videoplayer.js"
             url.flash="../plugins/videoplayer.swf"
-            videourl="../idle.webm"
+            videourl="../idle5.webm"
             panovideo="true"
             pausedonstart="false"
             loop="true"
