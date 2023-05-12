@@ -4,7 +4,7 @@
           <plugin name="video"
             url.html5="../plugins/videoplayer.js"
             url.flash="../plugins/videoplayer.swf"
-            videourl="../idle5.webm"
+            videourl="../usef/problem.webm"
             panovideo="true"
             pausedonstart="false"
             loop="true"
