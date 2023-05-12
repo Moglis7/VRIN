@@ -3,7 +3,7 @@
 	<include url="./components/landingPage.xml"/>
 	<include url="./components/questionsGirl.xml"/>
 	<include url="./components/questionsUsef.xml"/>
-	<include url="./components/questionsUsef.xml"/>
+	<include url="./components/questionsUsef2.xml"/>
 	<!--WebVR-->
 	<include url="%VIEWER%/plugins/webvr.xml" />
 	<plugin name="webvr" postracking="true" />
