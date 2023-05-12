@@ -3,7 +3,7 @@
 	<include url="./components/landingPage.xml"/>
 	<include url="./components/questionsGirl.xml"/>
 	<include url="./components/questionsUsef.xml"/>
-	<include url="./components/questionsUsef2.xml"/>
+	<include url="./components/questionsUsef.xml"/>
 	<!--WebVR-->
 	<include url="%VIEWER%/plugins/webvr.xml" />
 	<plugin name="webvr" postracking="true" />
@@ -42,10 +42,10 @@
 
 	<style name="start_button" type="text"
 		   css="text-align:center; 
-		   font-size:20px; 
+		   font-size:30px; 
 		   font-weight:800;"
     
-		   padding="30 30"
+		   padding="28 28"
 		   mergedalpha="false"
 		   bgborder="4 0x808080. 1" 
 		   bgroundedge="15"
