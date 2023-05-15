@@ -1,10 +1,28 @@
 <krpano>
+
+    <scene name="scene_U2_init" title="Usef2"   onstart="" thumburl="" lat="" lng="" heading="">
+        <plugin name="video"
+            url.html5="../plugins/videoplayer.js"
+            url.flash="../plugins/videoplayer.swf"
+            videourl="../usef2/problem.webm"
+            panovideo="true"
+            pausedonstart="false"
+            loop="false"
+            volume="1.0"
+            onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U2,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+        />
+
+        <image hfov="360"  vfov="180">            
+            <sphere url="plugin:video" />
+        </image>
+
+    </scene>
   
   <scene  name="scene_U2" title="1"   onstart="" thumburl="" lat="" lng="" heading="" >
           <plugin name="video"
             url.html5="../plugins/videoplayer.js"
             url.flash="../plugins/videoplayer.swf"
-            videourl="../idle5.webm"
+            videourl="../usef2/usef2_idle.webm"
             panovideo="true"
             pausedonstart="false"
             loop="true"
