@@ -9,7 +9,7 @@
             pausedonstart="false"
             loop="false"
             volume="1.0"
-            onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U2,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U2,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, easeinquad));"
         />
 
         <image hfov="360"  vfov="180">            
@@ -33,31 +33,31 @@
             <sphere url="plugin:video" />
         </image>
 
-        <hotspot name="doctor_1" style="button" oy="-500" ox="-900" ry="-10" tz="2000" scale="2.2"
+        <hotspot name="h_1" style="button" oy="-500" ox="-900" ry="-10" tz="2000" scale="2.2"
             distorted="true"				 			
             width="300"		
             html="Sir you need to take up language courses as we mentioned in the briefing."
             onover="tween(scale,2.8,easeOutExpo,0.2);"
             onout="tween(scale,2.2,easeOutExpo,0.2);"
-            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef2_1, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef2_1, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.6, 0.0, easeinquad));"
         />
 
-        <hotspot name="doctor_2" style="button" oy="-300" ox="-900" ry="-10" tz="2000" scale="2.2"
+        <hotspot name="h_2" style="button" oy="-300" ox="-900" ry="-10" tz="2000" scale="2.2"
             distorted="true"       
             width="300"	       
             html="Inform the school you don't speak the language."				
             onover="tween(scale,2.8,easeOutExpo,0.2);"
             onout="tween(scale,2.2,easeOutExpo,0.2);"
-            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef2_2, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef2_2, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.6, 0.0, easeinquad));"
         />
 
-        <hotspot name="doctor_3" style="button" oy="50" ox="-900" ry="-10" tz="2000" scale="2.2"
+        <hotspot name="h_3" style="button" oy="50" ox="-900" ry="-10" tz="2000" scale="2.2"
             distorted="true"
             width="300"		         
             html="This time I will accompany you, but I want you to understand how important it is to learn the language of the country you live in. If you learn it well you can be autonomous and support your family. Let's apply now for a free language course, shall we?"				
             onover="tween(scale,2.8,easeOutExpo,0.2);"
             onout="tween(scale,2.2,easeOutExpo,0.2);"
-            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef2_3, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef2_3, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.6, 0.0, easeinquad));"
         />
 <!-- 
         <hotspot name="doctor_4" style="button" oy="150" ox="-900" ry="-10" tz="2000" scale="2.2"
@@ -69,13 +69,13 @@
             onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_d4, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
         /> -->
 
-        <hotspot name="doctor_5" style="button" oy="400" ox="-900" ry="-10" tz="2000" scale="2.2"
+        <hotspot name="h_5" style="button" oy="400" ox="-900" ry="-10" tz="2000" scale="2.2"
             distorted="true"
             width="300"		         
             html="You need to talk to a different officer."				
             onover="tween(scale,2.8,easeOutExpo,0.2);"
             onout="tween(scale,2.2,easeOutExpo,0.2);"
-            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef2_5, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef2_5, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.6, 0.0, easeinquad));"
         />
    </scene>
 

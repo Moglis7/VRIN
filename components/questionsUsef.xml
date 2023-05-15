@@ -1,6 +1,6 @@
 <krpano>
     
-    <scene name="scene_U_init" title="Usef1"   onstart="" thumburl="" lat="" lng="" heading="">
+    <scene name="scene_U1_init" title="Usef1"   onstart="" thumburl="" lat="" lng="" heading="">
         <plugin name="video"
             url.html5="../plugins/videoplayer.js"
             url.flash="../plugins/videoplayer.swf"
@@ -9,7 +9,7 @@
             pausedonstart="false"
             loop="false"
             volume="1.0"
-            onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U1,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U1,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, easeinquad));"
         />
 
         <image hfov="360"  vfov="180">            
@@ -33,22 +33,22 @@
             <sphere url="plugin:video" />
         </image>
 
-        <hotspot name="doctor_1" style="button" oy="-300" ox="-900" ry="-10" tz="2000" scale="2.2"
+        <hotspot name="h_1" style="button" oy="-300" ox="-900" ry="-10" tz="2000" scale="2.2"
             distorted="true"				 			
             width="300"		
             html="I understand your needs and my job is to help you, but I can't do it best if we don't get organized."
             onover="tween(scale,2.8,easeOutExpo,0.2);"
             onout="tween(scale,2.2,easeOutExpo,0.2);"
-            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef1, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef1, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.6, 0.0, easeinquad));"
         />
 
-        <hotspot name="doctor_2" style="button" oy="-50" ox="-900" ry="-10" tz="2000" scale="2.2"
+        <hotspot name="h_2" style="button" oy="-50" ox="-900" ry="-10" tz="2000" scale="2.2"
             distorted="true"       
             width="300"	       
             html="Right now I am busy with other people and cannot give you the proper attention."				
             onover="tween(scale,2.8,easeOutExpo,0.2);"
             onout="tween(scale,2.2,easeOutExpo,0.2);"
-            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef2, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef2, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.6, 0.0, easeinquad));"
         />
 
         <!-- <hotspot name="doctor_3" style="button" oy="-50" ox="-900" ry="-10" tz="2000" scale="2.2"
@@ -60,22 +60,22 @@
             onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef3, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
         /> -->
 
-        <hotspot name="doctor_4" style="button" oy="150" ox="-900" ry="-10" tz="2000" scale="2.2"
+        <hotspot name="h_4" style="button" oy="150" ox="-900" ry="-10" tz="2000" scale="2.2"
             distorted="true"
             width="300"		         
             html="I'll be waiting for you next week."				
             onover="tween(scale,2.8,easeOutExpo,0.2);"
             onout="tween(scale,2.2,easeOutExpo,0.2);"
-            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef4, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef4, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.6, 0.0, easeinquad));"
         />
 
-        <hotspot name="doctor_5" style="button" oy="350" ox="-900" ry="-10" tz="2000" scale="2.2"
+        <hotspot name="h_5" style="button" oy="350" ox="-900" ry="-10" tz="2000" scale="2.2"
             distorted="true"
             width="300"		         
             html="Don't worry, we will solve your problem. I'll be waiting for you next week as we agreed."				
             onover="tween(scale,2.8,easeOutExpo,0.2);"
             onout="tween(scale,2.2,easeOutExpo,0.2);"
-            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef5, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef5, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.6, 0.0, easeinquad));"
         />
    </scene>
 
