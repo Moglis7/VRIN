@@ -77,6 +77,16 @@
             onout="tween(scale,2.2,easeOutExpo,0.2);"
             onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef5, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.6, 0.0, easeinquad));"
         />
+
+
+         <hotspot name="go_back" style="button" ox="0" oy="550" ry="0" tz="2000"	scale="2.2"	
+				distorted="true"				 			
+				width="300"	
+				html="Back to Questions"
+				onover="tween(scale,2.8,easeOutExpo,0.2);"
+            	onout="tween(scale,2.2,easeOutExpo,0.2);"
+            	onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_landing, null,MERGE|KEEPMOVING, OPENBLEND(1.0, -1.0, 0.6, 0.0, easeinquad)); "
+			/>
    </scene>
 
   
