@@ -303,7 +303,7 @@
                     pausedonstart="false" 
                     volume="1.0"					
 					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U2,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
             />
 			
             <image hfov="360" vfov="180">
@@ -320,7 +320,7 @@
                     pausedonstart="false" 
                     volume="1.0"					
 					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U2,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
             />
 			
             <image hfov="360" vfov="180">
@@ -337,7 +337,7 @@
                     pausedonstart="false" 
                     volume="1.0"					
 					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U2,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
             />
 			
             <image hfov="360" vfov="180">
@@ -354,7 +354,7 @@
                     pausedonstart="false" 
                     volume="1.0"					
 					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U2,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
             />
 			
             <image hfov="360" vfov="180">
@@ -362,7 +362,7 @@
             </image>			
     </scene>
 	
-	<scene name="susef2_5" title="wm5" onstart="" thumburl="" lat="" lng="" heading="">
+	<scene name="usef2_5" title="wm5" onstart="" thumburl="" lat="" lng="" heading="">
             <plugin name="video"
                     url.html5="plugins/videoplayer.js"
                     url.flash="plugins/videoplayer.swf"
@@ -371,7 +371,7 @@
                     pausedonstart="false" 
                     volume="1.0"					
 					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U2,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
             />
 			
             <image hfov="360" vfov="180">
