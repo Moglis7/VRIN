@@ -27,7 +27,7 @@
             html="2"
             onover="tween(scale,1.1,easeOutExpo,0.2);"
             onout="tween(scale,1,easeOutExpo,0.2);"
-            onclick="loadscene(scene_U1,null,MERGE,OPENBLEND(0.5, 0.0, 0.2, 0.0, linear));"
+            onclick="loadscene(scene_U_init, null,MERGE,OPENBLEND(0.5, 0.0, 0.2, 0.0, linear));"
 		/>
 
 		<hotspot name="button_right" style="start_button"

@@ -1,8 +1,12 @@
 
 <krpano>
+
+    <scene name="scene_girl_init" title="girl"   onstart="" thumburl="" lat="" lng="" heading="">
+
+    </scene>
   
   <scene  name="scene_girl" title="1"   onstart="" thumburl="" lat="" lng="" heading="" >
-          <plugin name="video"
+        <plugin name="video"
             url.html5="../plugins/videoplayer.js"
             url.flash="../plugins/videoplayer.swf"
             videourl="../idle5.webm"
