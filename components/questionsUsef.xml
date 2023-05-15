@@ -33,49 +33,49 @@
             <sphere url="plugin:video" />
         </image>
 
-        <hotspot name="doctor_1" style="button" oy="-450" ox="-500" ry="-5" tz="2000" scale="2.2"
+        <hotspot name="doctor_1" style="button" oy="-300" ox="-900" ry="-10" tz="2000" scale="2.2"
             distorted="true"				 			
             width="300"		
-            html="What equipment are we missing that you need to treat patients with covid?"
+            html="I understand your needs and my job is to help you, but I can't do it best if we don't get organized."
             onover="tween(scale,2.8,easeOutExpo,0.2);"
             onout="tween(scale,2.2,easeOutExpo,0.2);"
-            onclick=" loadscene(scene_d1, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef1, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
         />
 
-        <hotspot name="doctor_2" style="button" oy="-250" ox="-500" ry="-5" tz="2000" scale="2.2"
+        <hotspot name="doctor_2" style="button" oy="-50" ox="-900" ry="-10" tz="2000" scale="2.2"
             distorted="true"       
             width="300"	       
-            html="Do you have appropriate protective equipment on the ward?"				
+            html="Right now I am busy with other people and cannot give you the proper attention."				
             onover="tween(scale,2.8,easeOutExpo,0.2);"
             onout="tween(scale,2.2,easeOutExpo,0.2);"
-            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_d2, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef2, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
         />
 
-        <hotspot name="doctor_3" style="button" oy="-50" ox="-500" ry="-5" tz="2000" scale="2.2"
+        <!-- <hotspot name="doctor_3" style="button" oy="-50" ox="-900" ry="-10" tz="2000" scale="2.2"
             distorted="true"
             width="300"		         
-            html="Clinically, how does this virus affect patients?"				
+            html="3"				
             onover="tween(scale,2.8,easeOutExpo,0.2);"
             onout="tween(scale,2.2,easeOutExpo,0.2);"
-            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_d3, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef3, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+        /> -->
+
+        <hotspot name="doctor_4" style="button" oy="150" ox="-900" ry="-10" tz="2000" scale="2.2"
+            distorted="true"
+            width="300"		         
+            html="I'll be waiting for you next week."				
+            onover="tween(scale,2.8,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef4, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
         />
 
-        <hotspot name="doctor_4" style="button" oy="150" ox="-500" ry="-5" tz="2000" scale="2.2"
+        <hotspot name="doctor_5" style="button" oy="350" ox="-900" ry="-10" tz="2000" scale="2.2"
             distorted="true"
             width="300"		         
-            html="How quickly do sick patients recover and be discharged?"				
+            html="Don't worry, we will solve your problem. I'll be waiting for you next week as we agreed."				
             onover="tween(scale,2.8,easeOutExpo,0.2);"
             onout="tween(scale,2.2,easeOutExpo,0.2);"
-            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_d4, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
-        />
-
-        <hotspot name="doctor_5" style="button" oy="350" ox="-500" ry="-5" tz="2000" scale="2.2"
-            distorted="true"
-            width="300"		         
-            html="Do you know the current ICU bed capacity?"				
-            onover="tween(scale,2.8,easeOutExpo,0.2);"
-            onout="tween(scale,2.2,easeOutExpo,0.2);"
-            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_d5, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(usef5, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.3, 0.0, linear));"
         />
    </scene>
 

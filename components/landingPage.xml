@@ -7,39 +7,39 @@
 
     <scene name="scene_landing" title="landing" lat="" lng="" heading="">
         
-		<hotspot name="button_left" style="start_button"
+		<hotspot name="button_1" style="start_button"
             distorted="true"
             tz="1000"
             ty="-500"
             align='center'
             width="500"
-            html="1"
+            html="Moroccans"
             onover="tween(scale,1.1,easeOutExpo,0.2);"
             onout="tween(scale,1,easeOutExpo,0.2);"
-            onclick="loadscene(scene_girl_init,null,MERGE,OPENBLEND(0.5, 0.0, 0.2, 0.0, linear));"
+            onclick="loadscene(scene_girl,null,MERGE,OPENBLEND(0.5, 0.0, 0.2, 0.0, linear));"
 		/>
 
-		<hotspot name="button_center" style="start_button"
+		<hotspot name="button_2" style="start_button"
             distorted="true"
             tz="1000"
             align="center"
             width="500"
-            html="2"
+            html="Appointment"
             onover="tween(scale,1.1,easeOutExpo,0.2);"
             onout="tween(scale,1,easeOutExpo,0.2);"
-            onclick="loadscene(scene_U_init, null,MERGE,OPENBLEND(0.5, 0.0, 0.2, 0.0, linear));"
+            onclick="loadscene(scene_U1, null,MERGE,OPENBLEND(0.5, 0.0, 0.2, 0.0, linear));"
 		/>
 
-		<hotspot name="button_right" style="start_button"
+		<hotspot name="button_3" style="start_button"
             distorted="true"
             tz="1000"
             ty="500"
             align="center"
             width="500"
-            html="3"
+            html="School summons"
             onover="tween(scale,1.1,easeOutExpo,0.2);"
             onout="tween(scale,1,easeOutExpo,0.2);"
-            onclick="loadscene(scene_U2_init,null,MERGE,OPENBLEND(0.5, 0.0, 0.2, 0.0, linear));"
+            onclick="loadscene(scene_U2,null,MERGE,OPENBLEND(0.5, 0.0, 0.2, 0.0, linear));"
 		/>
 	</scene>
 </krpano>
