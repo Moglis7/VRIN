@@ -1,11 +1,11 @@
 
 <krpano>
 
-    <scene name="scene_girl_init" title="girl"   onstart="" thumburl="" lat="" lng="" heading="">
+    <scene name="scene_A" title="girl"   onstart="" thumburl="" lat="" lng="" heading="">
         <plugin name="video"
             url.html5="../plugins/videoplayer.js"
             url.flash="../plugins/videoplayer.swf"
-            videourl="../girl/1.webm"
+            videourl="../clips/A_Actor.mp4"
             panovideo="true"
             pausedonstart="false"
             loop="false"

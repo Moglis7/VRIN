@@ -81,12 +81,12 @@
 	<!--      ........  Ansewer Scenes   ...........   -->
 
 	<!-- nurse -->
-	<scene name="girl1" title="n1" onstart="" thumburl="" lat="" lng="" heading="" >
+	<scene name="A" title="n1" onstart="" thumburl="" lat="" lng="" heading="" >
 
             <plugin name="video"
                     url.html5="plugins/videoplayer.js"
                     url.flash="plugins/videoplayer.swf"
-                    videourl="./girl/2.webm"
+                    videourl="./clips/A Actor.webm"
                     panovideo="true"
                     pausedonstart="false"
                     volume="1.0"					
