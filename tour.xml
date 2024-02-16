@@ -25,10 +25,11 @@
 		 
 	<!--Buttons style-->
 	<style name="button" type="text"
-		   css="text-align:center; 
-		   text-align:center; 
-		   font-size:17px; 
+		   css="text-align:center;
+		   text-align:center;
+		   font-size:17px;
 		   font-weight:700;"
+           
 		   padding="8 8"
 		   mergedalpha="false"
 		   bgborder="4 0x808080. 1"
@@ -43,8 +44,8 @@
 	<style name="start_button" type="text"
 		   css="text-align:center; 
 		   font-size:30px; 
-		   font-weight:800;"
-    
+		   font-weight:800;" 
+
 		   padding="28 28"
 		   mergedalpha="false"
 		   bgborder="4 0x808080. 1" 

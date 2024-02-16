@@ -6,9 +6,7 @@
     <view hlookat="0" vlookat="0" fovtype="MFOV" fov="110" fovmin="80" fovmax="110" limitview="auto"/>
 
     <scene name="scene_landing" title="landing" lat="" lng="" heading="">
-        
-		<hotspot name="button_1" style="start_button"
-            distorted="true"
+        <layer name="button_1" style="start_button"
             tz="1000"
             ty="-500"
             align='center'
@@ -18,8 +16,9 @@
             onout="tween(scale,1,easeOutExpo,0.2);"
             onclick=" tween(alpha,0,0.2,default,WAIT); loadscene(scene_girl_init,null,MERGE,OPENBLEND(0.5, 0.0, 0.6, 0.0, easeinquad));"
 		/>
+		
 
-		<hotspot name="button_2" style="start_button"
+		<!-- <hotspot name="button_2" style="start_button"
             distorted="true"
             tz="1000"
             align="center"
@@ -40,7 +39,7 @@
             onover="tween(scale,1.1,easeOutExpo,0.2);"
             onout="tween(scale,1,easeOutExpo,0.2);"
             onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U2_init,null,MERGE,OPENBLEND(0.5, 0.0, 0.6, 0.0, easeinquad));"
-		/>
+		/> -->
 	</scene>
 </krpano>
 
