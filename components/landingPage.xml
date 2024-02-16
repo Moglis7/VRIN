@@ -6,15 +6,27 @@
     <view hlookat="0" vlookat="0" fovtype="MFOV" fov="110" fovmin="80" fovmax="110" limitview="auto"/>
 
     <scene name="scene_landing" title="landing" lat="" lng="" heading="">
+
         <layer name="button_1" style="start_button"
-            tz="1000"
-            ty="-500"
             align='center'
-            width="500"
+            width="400"
             html="Moroccans"
             onover="tween(scale,1.1,easeOutExpo,0.2);"
             onout="tween(scale,1,easeOutExpo,0.2);"
             onclick=" tween(alpha,0,0.2,default,WAIT); loadscene(scene_girl_init,null,MERGE,OPENBLEND(0.5, 0.0, 0.6, 0.0, easeinquad));"
+            y="25%"
+		/>
+        
+        <layer
+            name="intro"
+            type="image"        
+            url="../ui/Introduction.png"       
+            align='center'
+            width="get:stagewidth"
+            height="get:stageHeight"
+            scale="0.5"
+            y="-10%"            
+            alphachannel="auto"
 		/>
 		
 

@@ -28,8 +28,7 @@
 		   css="text-align:center;
 		   text-align:center;
 		   font-size:17px;
-		   font-weight:700;"
-           
+		   font-weight:700;"           
 		   padding="8 8"
 		   mergedalpha="false"
 		   bgborder="4 0x808080. 1"
@@ -43,19 +42,20 @@
 
 	<style name="start_button" type="text"
 		   css="text-align:center; 
-		   font-size:30px; 
-		   font-weight:800;" 
-
-		   padding="28 28"
+		   font-size:24px; 
+		   font-weight:700;" 
+		   padding="25 25"
 		   mergedalpha="false"
 		   bgborder="4 0x808080. 1" 
-		   bgroundedge="15"
+		   bgroundedge="20"
 		   bgshadow="0 1 4 0x000000 1.0"
 		   onover="set(bgcolor, 0xC7E4FC);"
 		   onout="calc(bgcolor, pressed ? 0x90CAF9 : 0xFFFFFF);"
 		   ondown="set(bgcolor, 0x90CAF9);"
 		   onup="calc(bgcolor, hovering ? 0xC7E4FC : 0xFFFFFF);"		   
 	/>
+
+
     
 
 
