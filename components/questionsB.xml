@@ -1,0 +1,85 @@
+<krpano>
+    
+    <scene name="scene_b_actor" title="actor_b"   onstart="" thumburl="" lat="" lng="" heading="">
+        <plugin name="video"
+            url.html5="../plugins/videoplayer.js"
+            url.flash="../plugins/videoplayer.swf"
+            videourl="../clips/b_Actor.mp4"
+            panovideo="true"
+            pausedonstart="false"
+            loop="false"
+            volume="1.0"
+            onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_b,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, easeinquad));"
+        />
+
+        <image hfov="360"  vfov="180">            
+            <sphere url="plugin:video" />
+        </image>
+
+    </scene>
+  
+  <scene  name="scene_b" title="1"   onstart="" thumburl="" lat="" lng="" heading="" >
+          <plugin name="video"
+            url.html5="../plugins/videoplayer.js"
+            url.flash="../plugins/videoplayer.swf"
+            videourl="../clips/idle_1.mp4"
+            panovideo="true"
+            pausedonstart="false"
+            loop="true"
+            volume="1.0"
+        />
+        
+        <image hfov="360"  vfov="180">            
+            <sphere url="plugin:video" />
+        </image>
+
+        <hotspot name="h_1" style="button" oy="-700" ox="800" ry="10" tz="2000" scale="2.2"
+            distorted="true"				 			
+            width="500"		
+            html="“I think it’s important not to use this kind of profiling based on country of origin when doing our work.”"
+            
+            onover="tween(scale,2.5,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(user_B1, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.6, 0.0, easeinquad));"
+        />
+
+        <hotspot name="h_2" style="button" oy="-320" ox="800" ry="10" tz="2000" scale="2.2"
+            distorted="true"       
+            width="500"	       
+            html="“Hey, I had something similar happen to me the other day. I did the brief anyway and was surprised to find out at a later meeting that my client actually found work.”"				
+            onover="tween(scale,2.5,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_c_actor, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.6, 0.0, easeinquad));"
+        />
+
+        <hotspot name="h_3" style="button" oy="-10" ox="800" ry="10" tz="2000" scale="2.2"
+            distorted="true"
+            width="500"		         
+            html="“Yeeeep. I agree.”"				
+            onover="tween(scale,2.5,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(user_A2, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.6, 0.0, easeinquad));"
+        />
+
+        <hotspot name="h_4" style="button" oy="240" ox="800" ry="10" tz="2000" scale="2.2"
+            distorted="true"
+            width="500"		         
+            html="“Mmmm…if you think that will be the case then, you should prepare accordingly.”"				
+            onover="tween(scale,2.5,easeOutExpo,0.2);"
+            onout="tween(scale,2.2,easeOutExpo,0.2);"
+            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(user_B4, null,MERGE|KEEPMOVING,OPENBLEND(1.0, -1.0, 0.6, 0.0, easeinquad));"
+        />
+
+
+         <!-- <hotspot name="go_back" style="button" ox="0" oy="550" ry="0" tz="2000"	scale="2.2"	
+				distorted="true"				 			
+				width="300"	
+				html="Back to Questions"
+				onover="tween(scale,2.5,easeOutExpo,0.2);"
+            	onout="tween(scale,2.2,easeOutExpo,0.2);"
+            	onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_landing, null,MERGE|KEEPMOVING, OPENBLEND(1.0, -1.0, 0.6, 0.0, easeinquad)); "
+			/> -->
+   </scene>
+
+  
+</krpano>

@@ -6,52 +6,76 @@
     <view hlookat="0" vlookat="0" fovtype="MFOV" fov="110" fovmin="80" fovmax="110" limitview="auto"/>
 
     <scene name="scene_landing" title="landing" lat="" lng="" heading="">
-
-        <layer name="button_1" style="start_button"
-            align='center'
-            width="400"
-            html="Moroccans"
-            onover="tween(scale,1.1,easeOutExpo,0.2);"
-            onout="tween(scale,1,easeOutExpo,0.2);"
-            onclick=" tween(alpha,0,0.2,default,WAIT); loadscene(scene_A,null,MERGE,OPENBLEND(0.5, 0.0, 0.6, 0.0, easeinquad));"
-            y="25%"
-		/>
-        
-        <layer
+     <hotspot
             name="intro"
-            type="image"        
-            url="../ui/Introduction.png"       
+            type="image"
+            distorted="true"
+            tz="1000"
+            ty="-500"   
+            url="../ui/vrExp.png"
             align='center'
-            width="get:stagewidth"
-            height="get:stageHeight"
-            scale="0.5"
-            y="-10%"            
+            width="calc:stagewidth * 1.1 "
+            height="calc:stagewidth *1.1 * 341/1808"
+            y="-10%"
             alphachannel="auto"
 		/>
-		
 
-		<!-- <hotspot name="button_2" style="start_button"
+        <hotspot            
+            name="button_1"
+            style="start_button2"
+            align='center'
             distorted="true"
             tz="1000"
-            align="center"
-            width="500"
-            html="Appointment"
-            onover="tween(scale,1.1,easeOutExpo,0.2);"
-            onout="tween(scale,1,easeOutExpo,0.2);"
-            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U1_init, null,MERGE,OPENBLEND(0.5, 0.0, 0.6, 0.0, easeinquad));"
+            ty="500"   
+            width="300"
+            html="Confirm" 
+            onclick=" tween(alpha,0,0.2,default,WAIT); loadscene(scene_starting,null,MERGE,OPENBLEND(0.5, 0.0, 0.6, 0.0, easeinquad));"
+            zorder="2"
+            onover="tween(scale,1.1,easeOutExpo,0.2, set(hotspot[buttonImage_1].scale, 1.05));  "
+            onout="tween(scale,1,easeOutExpo,0.2, set(hotspot[buttonImage_1].scale, 1));  "
+        />	
+
+    </scene>
+
+    <scene name="scene_starting" title="landing" lat="" lng="" heading="">
+        <hotspot
+            name="intro"
+            type="image"
+            distorted="true"
+            tz="1000"
+            ty="-500"   
+            url="../ui/introduction.png"
+            align='center'
+            width="calc:stagewidth *1.1"
+            height="calc:stagewidth *1.1* 241/1272"
+            y="-10%"
+            alphachannel="auto"
 		/>
 
-		<hotspot name="button_3" style="start_button"
-            distorted="true"
-            tz="1000"
-            ty="500"
-            align="center"
-            width="500"
-            html="School summons"
+        <!-- <hotspot name="buttonImage_1" type="image" url="../ui/btnBG.png" align='center' width="200"  
             onover="tween(scale,1.1,easeOutExpo,0.2);"
             onout="tween(scale,1,easeOutExpo,0.2);"
-            onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U2_init,null,MERGE,OPENBLEND(0.5, 0.0, 0.6, 0.0, easeinquad));"
-		/> -->
+            tz="1000"
+            ty="500"     
+            distorted="true"
+            zorder="1"    
+        />              -->
+        <hotspot            
+            name="button_1"
+            style="start_button2"
+            align='center'
+            distorted="true"
+            tz="1000"
+            ty="500"   
+            width="300"
+            html="Start" 
+            onclick=" tween(alpha,0,0.2,default,WAIT); loadscene(scene_a_actor,null,MERGE,OPENBLEND(0.5, 0.0, 0.6, 0.0, easeinquad));"
+            zorder="2"
+            onover="tween(scale,1.1,easeOutExpo,0.2, set(hotspot[buttonImage_1].scale, 1.05));  "
+            onout="tween(scale,1,easeOutExpo,0.2, set(hotspot[buttonImage_1].scale, 1));  "
+        />	
+
+		
 	</scene>
 </krpano>
 

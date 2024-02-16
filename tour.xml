@@ -1,9 +1,9 @@
 ﻿<krpano version="1.20.11" title="Virtual Tour">
 	<!-- Idle sceen-->
 	<include url="./components/landingPage.xml"/>
-	<include url="./components/questionsGirl.xml"/>
-	<include url="./components/questionsUsef.xml"/>
-	<include url="./components/questionsUsef2.xml"/>
+	<include url="./components/questionsA.xml"/>
+	<include url="./components/questionsB.xml"/>
+	<include url="./components/questionsC.xml"/>
 	<!--WebVR-->
 	<include url="%VIEWER%/plugins/webvr.xml" />
 	<plugin name="webvr" postracking="true" />
@@ -25,73 +25,100 @@
 		 
 	<!--Buttons style-->
 	<style name="button" type="text"
-		   css="text-align:center;
-		   text-align:center;
-		   font-size:17px;
-		   font-weight:700;"           
-		   padding="8 8"
+		   css="text-align: justify;
+		   font-size:26px;
+		   font-weight:500;"
+
+		   padding="10 10"
 		   mergedalpha="false"
-		   bgborder="4 0x808080. 1"
+		   bgborder="4 0x6af1fd. 1"
 		   bgroundedge="15"
-		   bgshadow="0 1 4 0x000000 1.0"
+		   bgshadow="0 1 4 0x6af1fd 1.0"
 		   onover="set(bgcolor, 0xC7E4FC);"
 		   onout="calc(bgcolor, pressed ? 0x90CAF9 : 0xFFFFFF);"
 		   ondown="set(bgcolor, 0x90CAF9);"
 		   onup="calc(bgcolor, hovering ? 0xC7E4FC : 0xFFFFFF);"
 	/>
 
-	<style name="start_button" type="text"
+	<!-- <style name="start_button" type="text"
 		   css="text-align:center; 
 		   font-size:24px; 
-		   font-weight:700;" 
+		   font-weight:700; font-weight:500; font-family: &quot;Montserrat&quot;, sans-serif; font-style: normal;"
 		   padding="25 25"
 		   mergedalpha="false"
-		   bgborder="4 0x808080. 1" 
+		   bgborder="4 0x6af1fd" 
 		   bgroundedge="20"
 		   bgshadow="0 1 4 0x000000 1.0"
 		   onover="set(bgcolor, 0xC7E4FC);"
 		   onout="calc(bgcolor, pressed ? 0x90CAF9 : 0xFFFFFF);"
 		   ondown="set(bgcolor, 0x90CAF9);"
-		   onup="calc(bgcolor, hovering ? 0xC7E4FC : 0xFFFFFF);"		   
+		   onup="calc(bgcolor, hovering ? 0xC7E4FC : 0xFFFFFF);"
+	/> -->
+
+    <style name="start_button2"
+        type="text"
+		css="text-align:center; font-size:40px; font-weight:700; font-family: &quot;Montserrat&quot;, sans-serif; font-style: normal;" 
+		padding="35 35"
+        mergedalpha="false"        
+        bgalpha="1.0"
+        bgborder="7 0xe74771" 
+		bgroundedge="25"
+		bgshadow="0 1 3 0x000000 1.0"
+        onover="set(bgcolor, 0xC7E4FC);"
+        onout="calc(bgcolor, pressed ? 0x90CAF9 : 0xFFFFFF);"
+        ondown="set(bgcolor, 0x90CAF9);"
+        onup="calc(bgcolor, hovering ? 0xC7E4FC : 0xFFFFFF);"
+	/>
+
+     <style name="end_button"
+        type="text"
+		css="text-align:center; font-size:40px; font-weight:700; font-family: &quot;Montserrat&quot;, sans-serif; font-style: normal;" 
+		padding="35 35"
+        mergedalpha="false"        
+        bgalpha="1.0"
+        bgborder="7 0xe74771" 
+		bgroundedge="25"
+		bgshadow="0 1 3 0x000000 1.0"
+        onover="set(bgcolor, 0xC7E4FC);"
+        onout="calc(bgcolor, pressed ? 0x90CAF9 : 0xFFFFFF);"
+        ondown="set(bgcolor, 0x90CAF9);"
+        onup="calc(bgcolor, hovering ? 0xC7E4FC : 0xFFFFFF);"
 	/>
 
 
-    
 
+    <!-- <hotspot name="go_back" style="button" ox="0" oy="550" ry="0" tz="2000"	scale="2.2"	
+        distorted="true"				 			
+        width="300"	
+        html="Back to Questions"
+        onover="tween(scale,2.8,easeOutExpo,0.2);"
+        onout="tween(scale,2.2,easeOutExpo,0.2);"
+        onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle, null,MERGE|KEEPMOVING,COLORBLEND(1.0,0x000000,easeOutSine)); "
+    />
 
-	<!-- <hotspot name="go_back" style="button" ox="0" oy="550" ry="0" tz="2000"	scale="2.2"	
-				distorted="true"				 			
-				width="300"	
-				html="Back to Questions"
-				onover="tween(scale,2.8,easeOutExpo,0.2);"
-            	onout="tween(scale,2.2,easeOutExpo,0.2);"
-            	onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle, null,MERGE|KEEPMOVING,COLORBLEND(1.0,0x000000,easeOutSine)); "
-			/>
-
-			<hotspot name="go_back2" style="button" ox="-600" oy="600" ry="200" tz="-4000"	scale="2.2"	
-				distorted="true"				 			
-				width="250"	
-				html="Back to Questions"
-				onover="tween(scale,2.8,easeOutExpo,0.2);"
-            	onout="tween(scale,2.2,easeOutExpo,0.2);"
-            	onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle, null,MERGE|KEEPMOVING,COLORBLEND(1.0,0x000000,easeOutSine)); "
-			/>			  -->
+    <hotspot name="go_back2" style="button" ox="-600" oy="600" ry="200" tz="-4000"	scale="2.2"	
+        distorted="true"				 			
+        width="250"	
+        html="Back to Questions"
+        onover="tween(scale,2.8,easeOutExpo,0.2);"
+        onout="tween(scale,2.2,easeOutExpo,0.2);"
+        onclick="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle, null,MERGE|KEEPMOVING,COLORBLEND(1.0,0x000000,easeOutSine)); "
+    />			  -->
 
 
 	<!--      ........  Ansewer Scenes   ...........   -->
 
 	<!-- nurse -->
-	<scene name="A" title="n1" onstart="" thumburl="" lat="" lng="" heading="" >
-
+	<scene name="user_A1" title="a1" onstart="" thumburl="" lat="" lng="" heading="" >
             <plugin name="video"
                     url.html5="plugins/videoplayer.js"
                     url.flash="plugins/videoplayer.swf"
-                    videourl="./clips/A Actor.webm"
+                    videourl="./clips/a1.mp4"
                     panovideo="true"
                     pausedonstart="false"
                     volume="1.0"					
 					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_girl,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(ending1,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
             />
 
             <image hfov="360" vfov="180">
@@ -99,33 +126,16 @@
             </image>			
     </scene>
 
-	<scene name="girl2" title="n2" onstart="" thumburl="" lat="" lng="" heading="">
+	<scene name="user_A2" title="a2" onstart="" thumburl="" lat="" lng="" heading="">
             <plugin name="video"
                     url.html5="plugins/videoplayer.js"
                     url.flash="plugins/videoplayer.swf"
-                    videourl="./girl/3.webm"
+                     videourl="./clips/a2.mp4"
                     panovideo="true"
                     pausedonstart="false" 
                     volume="1.0"					
 					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_girl,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
-            />
-			
-            <image hfov="360" vfov="180">
-                <sphere url="plugin:video" />
-            </image>			
-    </scene>
-
-	<scene name="girl3" title="n3" onstart="" thumburl="" lat="" lng="" heading="">
-            <plugin name="video"
-                    url.html5="plugins/videoplayer.js"
-                    url.flash="plugins/videoplayer.swf"
-                    videourl="./girl/4.webm"
-                    panovideo="true"
-                    pausedonstart="false" 
-                    volume="1.0"					
-					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_girl,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(ending4,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
             />
 			
             <image hfov="360" vfov="180">
@@ -133,17 +143,16 @@
             </image>			
     </scene>
 
-
-	<scene name="girl4" title="n4" onstart="" thumburl="" lat="" lng="" heading="">
+	<scene name="user_B1" title="b1" onstart="" thumburl="" lat="" lng="" heading="">
             <plugin name="video"
                     url.html5="plugins/videoplayer.js"
                     url.flash="plugins/videoplayer.swf"
-                    videourl="./girl/5.webm"
+                    videourl="./clips/b1.mp4"
                     panovideo="true"
                     pausedonstart="false" 
                     volume="1.0"					
 					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_girl,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(ending3,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
             />
 			
             <image hfov="360" vfov="180">
@@ -152,16 +161,34 @@
     </scene>
 
 
-	<scene name="girl5" title="n5" onstart="" thumburl="" lat="" lng="" heading="">
+	<scene name="user_B4" title="b4" onstart="" thumburl="" lat="" lng="" heading="">
             <plugin name="video"
                     url.html5="plugins/videoplayer.js"
                     url.flash="plugins/videoplayer.swf"
-                    videourl="./girl/n5.webm"
+                    videourl="./clips/b4.mp4"
                     panovideo="true"
                     pausedonstart="false" 
                     volume="1.0"					
 					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_girl,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_C,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>			
+    </scene>
+
+
+	<scene name="user_C1" title="c1" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                    videourl="./clips/c1.mp4"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_c,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
             />
 			
             <image hfov="360" vfov="180">
@@ -170,16 +197,16 @@
     </scene>
 	
 	
-	<scene name="scene_n6" title="n6" onstart="" thumburl="" lat="" lng="" heading="">
+	<scene name="user_C2" title="c2" onstart="" thumburl="" lat="" lng="" heading="">
             <plugin name="video"
                     url.html5="plugins/videoplayer.js"
                     url.flash="plugins/videoplayer.swf"
-                    videourl="./nurse/n6.webm"
+                      videourl="./clips/c2.mp4"
                     panovideo="true"
                     pausedonstart="false" 
                     volume="1.0"					
 					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_girl,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_c,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
             />
 			
             <image hfov="360" vfov="180">
@@ -189,212 +216,195 @@
 	
 	<!-- Dotcor -->
 	
-	<scene name="usef1" title="d1" onstart="" thumburl="" lat="" lng="" heading="">
+	<scene name="user_C3" title="c3" onstart="" thumburl="" lat="" lng="" heading="">
             <plugin name="video"
                     url.html5="plugins/videoplayer.js"
                     url.flash="plugins/videoplayer.swf"
-                    videourl="./usef/1.webm"
+                      videourl="./clips/c3.mp4"
                     panovideo="true"
                     pausedonstart="false" 
                     volume="1.0"					
 					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U1,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_c,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
+            />
+			
+            <image hfov="360" vfov="180">
+                <sphere url="plugin:video" />
+            </image>
+    </scene>	
+	
+	<scene name="user_C4" title="c4" onstart="" thumburl="" lat="" lng="" heading="">
+            <plugin name="video"
+                    url.html5="plugins/videoplayer.js"
+                    url.flash="plugins/videoplayer.swf"
+                      videourl="./clips/c4.mp4"
+                    panovideo="true"
+                    pausedonstart="false" 
+                    volume="1.0"					
+					loop="false" 
+					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(ending5,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
             />
 			
             <image hfov="360" vfov="180">
                 <sphere url="plugin:video" />
             </image>			
     </scene>
-	
-	
-	<scene name="usef2" title="d2" onstart="" thumburl="" lat="" lng="" heading="">
-            <plugin name="video"
-                    url.html5="plugins/videoplayer.js"
-                    url.flash="plugins/videoplayer.swf"
-                    videourl="./usef/2.webm"
-                    panovideo="true"
-                    pausedonstart="false" 
-                    volume="1.0"					
-					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U1,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
-            />
-			
-            <image hfov="360" vfov="180">
-                <sphere url="plugin:video" />
-            </image>			
+
+    <!-- ending1 -->
+    <scene name="ending1" title="e1" onstart="" thumburl="" lat="" lng="" heading=""> 
+     <hotspot
+            name="end1_text"
+            type="image"
+            distorted="true"
+            tz="1000"
+            ty="-500"   
+            url="../ui/end1.png"
+            align='center'
+            width="calc:stagewidth * 1.1 "
+            height="calc:stagewidth *1.1 * 218/859"
+            y="-10%"
+            alphachannel="auto"
+		/>
+        <hotspot            
+            name="btn_end1"
+            style="end_button"
+            align='center'
+            distorted="true"
+            tz="1000"
+            ty="500"   
+            width="300"
+             html="Let's Go" 
+            onclick=" tween(alpha,0,0.2,default,WAIT); loadscene(scene_starting,null,MERGE,OPENBLEND(0.5, 0.0, 0.6, 0.0, easeinquad));"
+            zorder="2"
+            onover="tween(scale,1.1,easeOutExpo,0.2, set(hotspot[buttonImage_1].scale, 1.05));  "
+            onout="tween(scale,1,easeOutExpo,0.2, set(hotspot[buttonImage_1].scale, 1));  "
+        />   
     </scene>
-	
-	
-	<scene name="usef3" title="d3" onstart="" thumburl="" lat="" lng="" heading="">
-            <plugin name="video"
-                    url.html5="plugins/videoplayer.js"
-                    url.flash="plugins/videoplayer.swf"
-                    videourl="./usef/3.webm"
-                    panovideo="true"
-                    pausedonstart="false" 
-                    volume="1.0"					
-					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U1,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
-            />
-			
-            <image hfov="360" vfov="180">
-                <sphere url="plugin:video" />
-            </image>			
+
+     <!-- ending2 -->
+    <scene name="ending2" title="e2" onstart="" thumburl="" lat="" lng="" heading=""> 
+     <hotspot
+            name="end2_text"
+            type="image"
+            distorted="true"
+            tz="1000"
+            ty="-500"   
+            url="../ui/end2.png"
+            align='center'
+            width="calc:stagewidth "
+            height="calc:stagewidth  * 304/859"
+            y="-10%"
+            alphachannel="auto"
+		/>
+        <hotspot            
+            name="btn_end2"
+            style="end_button"
+            align='center'
+            distorted="true"
+            tz="1000"
+            ty="500"   
+            width="300"
+             html="Let's Go" 
+            onclick=" tween(alpha,0,0.2,default,WAIT); loadscene(scene_starting,null,MERGE,OPENBLEND(0.5, 0.0, 0.6, 0.0, easeinquad));"
+            zorder="2"
+            onover="tween(scale,1.1,easeOutExpo,0.2, set(hotspot[buttonImage_1].scale, 1.05));  "
+            onout="tween(scale,1,easeOutExpo,0.2, set(hotspot[buttonImage_1].scale, 1));  "
+        />   
     </scene>
-	
-	<scene name="usef4" title="d4" onstart="" thumburl="" lat="" lng="" heading="">
-            <plugin name="video"
-                    url.html5="plugins/videoplayer.js"
-                    url.flash="plugins/videoplayer.swf"
-                    videourl="./usef/4.webm"
-                    panovideo="true"
-                    pausedonstart="false" 
-                    volume="1.0"					
-					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U1,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
-            />
-			
-            <image hfov="360" vfov="180">
-                <sphere url="plugin:video" />
-            </image>			
+
+ <!-- ending3 -->
+    <scene name="ending3" title="e3" onstart="" thumburl="" lat="" lng="" heading=""> 
+     <hotspot
+            name="end3_text"
+            type="image"
+            distorted="true"
+            tz="1000"
+            ty="-500"   
+            url="../ui/end3.png"
+            align='center'
+            width="calc:stagewidth "
+            height="calc:stagewidth * 301/859"
+            y="-10%"
+            alphachannel="auto"
+		/>
+        <hotspot            
+            name="btn_end3"
+            style="end_button"
+            align='center'
+            distorted="true"
+            tz="1000"
+            ty="500"   
+            width="300"
+             html="Let's Go" 
+            onclick=" tween(alpha,0,0.2,default,WAIT); loadscene(scene_starting,null,MERGE,OPENBLEND(0.5, 0.0, 0.6, 0.0, easeinquad));"
+            zorder="2"
+            onover="tween(scale,1.1,easeOutExpo,0.2, set(hotspot[buttonImage_1].scale, 1.05));  "
+            onout="tween(scale,1,easeOutExpo,0.2, set(hotspot[buttonImage_1].scale, 1));  "
+        />   
     </scene>
-	
-	<scene name="usef5" title="d5" onstart="" thumburl="" lat="" lng="" heading="">
-            <plugin name="video"
-                    url.html5="plugins/videoplayer.js"
-                    url.flash="plugins/videoplayer.swf"
-                    videourl="./usef/5.webm"
-                    panovideo="true"
-                    pausedonstart="false" 
-                    volume="1.0"					
-					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U1,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
-            />
-			
-            <image hfov="360" vfov="180">
-                <sphere url="plugin:video" />
-            </image>			
+
+ <!-- ending4 -->
+    <scene name="ending4" title="e4" onstart="" thumburl="" lat="" lng="" heading=""> 
+    <hotspot
+            name="end4_text"
+            type="image"
+            distorted="true"
+            tz="1000"
+            ty="-500"   
+            url="../ui/end4.png"
+            align='center'
+            width="calc:stagewidth  "
+            height="calc:stagewidth  * 301/859"
+            y="-10%"
+            alphachannel="auto"
+		/>
+        <hotspot            
+            name="btn_end4"
+            style="end_button"
+            align='center'
+            distorted="true"
+            tz="1000"
+            ty="500"   
+            width="300"
+           html="Let's Go" 
+            onclick=" tween(alpha,0,0.2,default,WAIT); loadscene(scene_starting,null,MERGE,OPENBLEND(0.5, 0.0, 0.6, 0.0, easeinquad));"
+            zorder="2"
+            onover="tween(scale,1.1,easeOutExpo,0.2, set(hotspot[buttonImage_1].scale, 1.05));  "
+            onout="tween(scale,1,easeOutExpo,0.2, set(hotspot[buttonImage_1].scale, 1));  "
+        />   
     </scene>
-	
-	<scene name="scene_d6" title="d6" onstart="" thumburl="" lat="" lng="" heading="">
-            <plugin name="video"
-                    url.html5="plugins/videoplayer.js"
-                    url.flash="plugins/videoplayer.swf"
-                    videourl="./doctor/dx.webm"
-                    panovideo="true"
-                    pausedonstart="false" 
-                    volume="1.0"					
-					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U1,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
-            />
-			
-            <image hfov="360" vfov="180">
-                <sphere url="plugin:video" />
-            </image>			
+
+ <!-- ending5 -->
+    <scene name="ending5" title="e5" onstart="" thumburl="" lat="" lng="" heading=""> 
+    <hotspot
+            name="end5_text"
+            type="image"
+            distorted="true"
+            tz="1000"
+            ty="-500"   
+            url="../ui/end5.png"
+            align='center'
+            width="calc:stagewidth "
+            height="calc:stagewidth * 301/859"
+            y="-10%"
+            alphachannel="auto"
+		/>
+        <hotspot            
+            name="btn_end5"
+            style="end_button"
+            align='center'
+            distorted="true"
+            tz="1000"
+            ty="500"   
+            width="300"
+            html="Play Again" 
+            onclick=" tween(alpha,0,0.2,default,WAIT); loadscene(scene_starting,null,MERGE,OPENBLEND(0.5, 0.0, 0.6, 0.0, easeinquad));"
+            zorder="2"
+            onover="tween(scale,1.1,easeOutExpo,0.2, set(hotspot[buttonImage_1].scale, 1.05));  "
+            onout="tween(scale,1,easeOutExpo,0.2, set(hotspot[buttonImage_1].scale, 1));  "
+        />   
     </scene>
-	
-	<!-- Ward manager --> 
-	
-	<scene name="usef2_1" title="wm1" onstart="" thumburl="" lat="" lng="" heading="">
-            <plugin name="video"
-                    url.html5="plugins/videoplayer.js"
-                    url.flash="plugins/videoplayer.swf"
-                    videourl="./usef2/1.webm"
-                    panovideo="true"
-                    pausedonstart="false" 
-                    volume="1.0"					
-					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U2,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
-            />
-			
-            <image hfov="360" vfov="180">
-                <sphere url="plugin:video" />
-            </image>			
-    </scene>
-	
-	<scene name="usef2_2" title="wm2" onstart="" thumburl="" lat="" lng="" heading="">
-            <plugin name="video"
-                    url.html5="plugins/videoplayer.js"
-                    url.flash="plugins/videoplayer.swf"
-                    videourl="./usef2/2.webm"
-                    panovideo="true"
-                    pausedonstart="false" 
-                    volume="1.0"					
-					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U2,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
-            />
-			
-            <image hfov="360" vfov="180">
-                <sphere url="plugin:video" />
-            </image>			
-    </scene>
-	
-	<scene name="usef2_3" title="wm3" onstart="" thumburl="" lat="" lng="" heading="">
-            <plugin name="video"
-                    url.html5="plugins/videoplayer.js"
-                    url.flash="plugins/videoplayer.swf"
-                    videourl="./usef2/3.webm"
-                    panovideo="true"
-                    pausedonstart="false" 
-                    volume="1.0"					
-					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U2,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
-            />
-			
-            <image hfov="360" vfov="180">
-                <sphere url="plugin:video" />
-            </image>			
-    </scene>
-	
-	<scene name="usef2_4" title="wm4" onstart="" thumburl="" lat="" lng="" heading="">
-            <plugin name="video"
-                    url.html5="plugins/videoplayer.js"
-                    url.flash="plugins/videoplayer.swf"
-                    videourl="./usef2/4.webm"
-                    panovideo="true"
-                    pausedonstart="false" 
-                    volume="1.0"					
-					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U2,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
-            />
-			
-            <image hfov="360" vfov="180">
-                <sphere url="plugin:video" />
-            </image>			
-    </scene>
-	
-	<scene name="usef2_5" title="wm5" onstart="" thumburl="" lat="" lng="" heading="">
-            <plugin name="video"
-                    url.html5="plugins/videoplayer.js"
-                    url.flash="plugins/videoplayer.swf"
-                    videourl="./usef2/5.webm"
-                    panovideo="true"
-                    pausedonstart="false" 
-                    volume="1.0"					
-					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_U2,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
-            />
-			
-            <image hfov="360" vfov="180">
-                <sphere url="plugin:video" />
-            </image>			
-    </scene>
-	
-	<scene name="scene_wm6" title="wm6" onstart="" thumburl="" lat="" lng="" heading="">
-            <plugin name="video"
-                    url.html5="plugins/videoplayer.js"
-                    url.flash="plugins/videoplayer.swf"
-                    videourl="./ward_manager/wm6.webm"
-                    panovideo="true"
-                    pausedonstart="false" 
-                    volume="1.0"					
-					loop="false" 
-					onvideocomplete="tween(alpha,0,0.2,default,WAIT); loadscene(scene_idle,null,MERGE|KEEPMOVING,OPENBLEND(0.8, -1.0, 0.3, 0.0, linear));"
-            />
-			
-            <image hfov="360" vfov="180">
-                <sphere url="plugin:video" />
-            </image>			
-    </scene>
+
+
     
 </krpano>
